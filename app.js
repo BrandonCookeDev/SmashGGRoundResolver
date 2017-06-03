@@ -1,11 +1,15 @@
+'use strict'
+
 const _     = require('lodash');
 const co    = require('co');
-const log   = require('winston');
 const wreck = require('wreck');
 const StringDecoder = require('string_decoder').StringDecoder;
 const decoder = new StringDecoder('utf8');
 const format  = require('util').format;
-const cache   = require('./cache').instance;
+
+const cache   = require('./lib/Cache').instance;
+let log       = require('./lib/Logger');
+
 
 var TOURNAMENT_URL = 'https://api.smash.gg/tournament/%s?expand[]=event&expand[]=phase';
 var EVENT_URL = 'https://api.smash.gg/event/%s?expand[]=phase&expand[]=groups'
@@ -13,9 +17,6 @@ var PHASE_URL = 'https://api.smash.gg/phase/%s?expand[]=groups';
 var GROUP_URL = 'https://api.smash.gg/phase_group/%s?expand[]=sets&expand[]=entrants&expand[]=standings';
 
 var tournament = 'function1';
-
-tournamentUrl = format(TOURNAMENT_URL, tournament);
-
 
 var phaseIds = [];
 var groupIds = [];
@@ -69,6 +70,7 @@ getTournamentData(tournament)
 
 function getTournamentData(tournamentName){
     return new Promise(function(resolve, reject){
+        log.debug('Getting tournament data for ' + tournamentName);
         try {
 
             var tournamentUrl = format(TOURNAMENT_URL, tournamentName);
@@ -94,6 +96,7 @@ function getTournamentData(tournamentName){
 
 function getEventData(id){
     return new Promise(function(resolve, reject){
+        log.debug('Getting event data for ' + id);
         try {
 
             var eventUrl = format(EVENT_URL, id);
@@ -119,6 +122,7 @@ function getEventData(id){
 
 function getGroupData(id){
     return new Promise(function(resolve, reject){
+        log.debug('Getting group data for ' + id);
         try {
 
             var groupUrl = format(GROUP_URL, id);
@@ -144,6 +148,8 @@ function getGroupData(id){
 
 function getPhaseData(id){
     return new Promise(function(resolve, reject){
+        log.debug('Getting phase data for ' + id);
+
         try {
 
             var phaseUrl = format(PHASE_URL, id);
@@ -176,8 +182,8 @@ function getAllPlayers(tournamentName){
             if (cachedValue) resolve(cachedValue);
             else {
                 getGroupsFromTournamentName(tournamentName)
-                    .then(function (groups) {
-                        console.log(groups);
+                    .then(function(groups) {
+                        console.log(groups)
                     }).catch(log.error);
             }
         }).catch(function(err){
@@ -189,31 +195,36 @@ function getAllPlayers(tournamentName){
 
 function getGroupsFromTournamentName(tournamentName){
     return new Promise(function(resolve, reject){
+        log.debug('Getting all group data for ' + tournamentName);
+
         var groupData = [];
         getTournamentData(tournamentName)
             .then(function (tournamentData) {
+                var phasePromises = [];
                 var phases = tournamentData.phase;
 
                 phases.forEach(function(phase){
-                    var phaseId = phase.id;
+                    var promise = getPhaseData(phase.id)
+                    phasePromises.push(promise);
+                });
 
-                    getPhaseData(phaseId)
-                        .then(function(phaseData){
-                            var groups = phaseData.groups;
+                Promise.all(phasePromises)
+                    .then(function(phaseDataArr){
+                        var groupPromises = [];
+                        phaseDataArr.forEach(function(phase){
+                            var groups = phase.groups;
+                            groups.forEach(function(group){
+                                var promise = getGroupData(group.id);
+                                groupPromises.push(promise);
+                            });
+                        });
 
-                            co(function*() {
-                                for(var i=0; i<groups.length; i++) {
-                                    var group = groups[i];
-                                    var groupId = group.id;
-
-                                    var data = yield getGroupData(groupId);
-                                    groupData.push(data);
-                                }
-
-                                resolve(groupData);
-                            })
-                        }).catch(reject);
-                })
+                        Promise.all(groupPromises)
+                            .then(function(groupDataArr){
+                                resolve(groupDataArr);
+                            }).catch(reject);
+                    })
+                    .catch(reject);
             }).catch(reject);
     })
 }

@@ -1,0 +1,11 @@
+2017-06-03T18:47:36.632Z - error:  TypeError: Cannot read property 'forEach' of undefined
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:207:44
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-06-03T18:49:16.250Z - error:  TypeError: Cannot read property 'forEach' of undefined
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:207:44
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-06-03T18:49:47.053Z - error:  TypeError: Cannot read property 'id' of undefined
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:208:67
+    at Array.forEach (native)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:207:38
+    at process._tickCallback (internal/process/next_tick.js:103:7)
