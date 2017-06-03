@@ -1,0 +1,18 @@
+{
+  "name": "smash_gg_round_pull",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "co": "^4.6.0",
+    "lodash": "^4.17.4",
+    "node-cache": "^4.1.1",
+    "winston": "^2.3.1",
+    "wreck": "^12.2.2"
+  }
+}
