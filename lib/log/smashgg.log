@@ -9,3 +9,209 @@
     at Array.forEach (native)
     at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:207:38
     at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-06-03T19:32:05.290Z - error:  TypeError: Cannot read property '0' of undefined
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:205:40
+    at Array.forEach (native)
+    at getPlayersFromGroup (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:204:14)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:189:44
+    at Array.forEach (native)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:188:32
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-06-04T12:53:44.076Z - error:  TypeError: matches.append is not a function
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:286:25
+    at next (native)
+    at onFulfilled (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/co/index.js:65:19)
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-06-04T12:53:44.083Z - error:  TypeError: matches.append is not a function
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:286:25
+    at next (native)
+    at onFulfilled (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/co/index.js:65:19)
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-06-04T12:53:44.084Z - error:  TypeError: matches.append is not a function
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:286:25
+    at next (native)
+    at onFulfilled (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/co/index.js:65:19)
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-06-04T12:53:44.084Z - error:  TypeError: matches.append is not a function
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:286:25
+    at next (native)
+    at onFulfilled (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/co/index.js:65:19)
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-06-04T12:53:44.084Z - error:  TypeError: matches.append is not a function
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:286:25
+    at next (native)
+    at onFulfilled (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/co/index.js:65:19)
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-06-04T12:53:44.084Z - error:  TypeError: matches.append is not a function
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:286:25
+    at next (native)
+    at onFulfilled (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/co/index.js:65:19)
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-06-04T12:53:44.084Z - error:  TypeError: matches.append is not a function
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:286:25
+    at next (native)
+    at onFulfilled (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/co/index.js:65:19)
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-06-04T12:53:44.084Z - error:  TypeError: matches.append is not a function
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:286:25
+    at next (native)
+    at onFulfilled (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/co/index.js:65:19)
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-06-04T12:53:44.085Z - error:  TypeError: matches.append is not a function
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:286:25
+    at next (native)
+    at onFulfilled (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/co/index.js:65:19)
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-06-04T12:53:44.085Z - error:  TypeError: matches.append is not a function
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:286:25
+    at next (native)
+    at onFulfilled (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/co/index.js:65:19)
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-06-04T12:53:44.085Z - error:  TypeError: matches.append is not a function
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:286:25
+    at next (native)
+    at onFulfilled (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/co/index.js:65:19)
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-06-04T12:53:44.088Z - error:  TypeError: matches.append is not a function
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:286:25
+    at next (native)
+    at onFulfilled (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/co/index.js:65:19)
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-06-04T12:53:44.089Z - error:  TypeError: matches.append is not a function
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:286:25
+    at next (native)
+    at onFulfilled (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/co/index.js:65:19)
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-06-04T12:53:44.089Z - error:  TypeError: matches.append is not a function
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:286:25
+    at next (native)
+    at onFulfilled (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/co/index.js:65:19)
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-06-04T12:53:44.090Z - error:  TypeError: matches.append is not a function
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:286:25
+    at next (native)
+    at onFulfilled (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/co/index.js:65:19)
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-06-04T12:53:44.091Z - error:  TypeError: matches.append is not a function
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:286:25
+    at next (native)
+    at onFulfilled (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/co/index.js:65:19)
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-06-04T12:53:44.091Z - error:  TypeError: matches.append is not a function
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:286:25
+    at next (native)
+    at onFulfilled (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/co/index.js:65:19)
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-06-04T12:53:44.091Z - error:  TypeError: matches.append is not a function
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:286:25
+    at next (native)
+    at onFulfilled (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/co/index.js:65:19)
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-06-04T12:53:44.092Z - error:  TypeError: matches.append is not a function
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:286:25
+    at next (native)
+    at onFulfilled (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/co/index.js:65:19)
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-06-04T12:53:44.092Z - error:  TypeError: matches.append is not a function
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:286:25
+    at next (native)
+    at onFulfilled (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/co/index.js:65:19)
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-06-04T12:53:44.092Z - error:  TypeError: matches.append is not a function
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:286:25
+    at next (native)
+    at onFulfilled (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/co/index.js:65:19)
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-06-04T12:53:44.093Z - error:  TypeError: matches.append is not a function
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:286:25
+    at next (native)
+    at onFulfilled (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/co/index.js:65:19)
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-06-04T12:53:44.093Z - error:  TypeError: matches.append is not a function
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:286:25
+    at next (native)
+    at onFulfilled (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/co/index.js:65:19)
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-06-04T12:53:44.094Z - error:  TypeError: matches.append is not a function
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:286:25
+    at next (native)
+    at onFulfilled (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/co/index.js:65:19)
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-06-04T12:53:44.095Z - error:  TypeError: matches.append is not a function
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:286:25
+    at next (native)
+    at onFulfilled (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/co/index.js:65:19)
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-06-04T12:53:44.096Z - error:  TypeError: matches.append is not a function
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:286:25
+    at next (native)
+    at onFulfilled (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/co/index.js:65:19)
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-06-04T12:53:44.096Z - error:  TypeError: matches.append is not a function
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:286:25
+    at next (native)
+    at onFulfilled (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/co/index.js:65:19)
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-06-04T14:13:55.831Z - error:  TypeError: Cannot read property 'forEach' of undefined
+    at getPlayersFromGroup (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:180:12)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:160:48
+    at Array.forEach (native)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:159:32
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-06-04T14:14:20.690Z - error:  TypeError: Cannot read property 'forEach' of undefined
+    at getPlayersFromGroup (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:180:12)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:160:48
+    at Array.forEach (native)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:159:32
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-06-04T15:09:39.203Z - error:  TypeError: arguments.forEach is not a function
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:305:19
+    at resolvePlayers (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:303:12)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:278:13
+    at getMatchesFromGroup (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:268:12)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:253:40
+    at Array.forEach (native)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:252:24
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-06-04T15:12:02.181Z - error:  TypeError: arguments.forEach is not a function
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:304:19
+    at resolvePlayers (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:302:12)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:278:13
+    at getMatchesFromGroup (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:268:12)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:253:40
+    at Array.forEach (native)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:252:24
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-06-04T15:16:38.398Z - error:  ReferenceError: matches is not defined
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:290:25
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-06-04T15:24:54.668Z - error:  ReferenceError: player1Id is not defined
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:290:24
+    at getMatchesFromSet (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:289:12)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:277:27
+    at getMatchesFromGroup (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:268:12)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:253:40
+    at Array.forEach (native)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:252:24
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-06-04T15:25:34.328Z - error:  ReferenceError: player1Id is not defined
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:290:24
+    at getMatchesFromSet (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:289:12)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:277:27
+    at getMatchesFromGroup (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:268:12)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:253:40
+    at Array.forEach (native)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:252:24
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-06-04T15:30:26.309Z - error:  TypeError: Cannot read property 'tag' of undefined
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:282:74
+    at baseUniq (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/lodash/lodash.js:4287:35)
+    at Function.uniqBy (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/lodash/lodash.js:8435:40)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:282:29
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-06-04T15:31:25.164Z - error:  TypeError: Cannot read property 'tag' of undefined
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:282:74
+    at baseUniq (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/lodash/lodash.js:4287:35)
+    at Function.uniqBy (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/lodash/lodash.js:8435:40)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:282:29
+    at process._tickCallback (internal/process/next_tick.js:103:7)

@@ -9,6 +9,8 @@ const format  = require('util').format;
 
 const cache   = require('./lib/Cache').instance;
 let log       = require('./lib/Logger');
+let Player    = require('./lib/Objects/Player');
+let Match     = require('./lib/Objects/Match');
 
 
 var TOURNAMENT_URL = 'https://api.smash.gg/tournament/%s?expand[]=event&expand[]=phase';
@@ -25,48 +27,18 @@ Uint8Array.prototype.decodeJSON = function(){
     return JSON.parse(decoder.write(this));
 };
 
-getAllPlayers(tournament);
+function init() {
+    co(function*() {
+        var players = yield getAllPlayers(tournament);
+        yield cacheIndividualPlayers(players);
+        var matches = yield getMatches(tournament);
+    }).catch(function(err){
+        log.error(err);
+        process.exit(1);
+    })
+}
 
-/*
-getTournamentData(tournament)
-    .then(function(tournamentData){
-
-        var events = tournamentData.event;
-        events.forEach(function(event){
-            var eventId = event.id;
-
-            getEventData(eventId)
-                .then(function(eventData){
-
-                    var phases = eventData.phase;
-                    phases.forEach(function (phase) {
-                        var phaseId = phase.id;
-                        phaseIds.push(phaseId);
-
-                        getPhaseData(phaseId)
-                            .then(function(phaseData){
-
-                                var phaseId = phaseData.phase.id;
-                                var groups = phaseData.groups;
-                                groups.forEach(function (group) {
-                                    var groupId = group.id;
-
-                                    getGroupData(groupId)
-                                        .then(function(groupData){
-
-                                            groupId = groupData.group.id;
-
-
-                                        }).catch(log.error)
-
-                                })
-                        }).catch(log.error);
-                    })
-                }).catch(log.error);
-        })
-    }).catch(log.error);
-*/
-
+init();
 
 function getTournamentData(tournamentName){
     return new Promise(function(resolve, reject){
@@ -143,7 +115,7 @@ function getGroupData(id){
             }
             return reject('unknown error getting phase data');
         }
-    })
+    }).catch(log.error);
 }
 
 function getPhaseData(id){
@@ -170,7 +142,7 @@ function getPhaseData(id){
             }
             return reject('unknown error getting phase data');
         }
-    })
+    }).catch(log.error);
 }
 
 function getAllPlayers(tournamentName){
@@ -183,14 +155,56 @@ function getAllPlayers(tournamentName){
             else {
                 getGroupsFromTournamentName(tournamentName)
                     .then(function(groups) {
-                        console.log(groups)
+                        var players = [];
+                        groups.forEach(function(group){
+                            var groupPlayers = getPlayersFromGroup(group);
+                            players = players.concat(groupPlayers)
+                        });
+
+                        players = _.uniqBy(players, function(p){return p.entrantId});
+
+                        cache.cacheTournamentPlayers(tournamentName, players);
+                        resolve(players);
                     }).catch(log.error);
             }
         }).catch(function(err){
             log.error(err);
             return reject(err);
         })
-    })
+    }).catch(log.error);
+}
+
+function getPlayersFromGroup(group){
+    var players = [];
+    var groupPlayers = group.player;
+    groupPlayers.forEach(function(player){
+        var tag, globalId, entrantId;
+        tag = player.gamerTag;
+        globalId = player.id;
+        entrantId = parseInt(player.entrantId);
+
+        var p = new Player(tag, globalId, entrantId);
+        players.push(p);
+    });
+
+    return players;
+}
+
+function cacheIndividualPlayers(players){
+    return new Promise(function(resolve, reject){
+        var promises = [];
+        players.forEach(function(player){
+            promises.push(cache.cacheTournamentPlayer(player));
+        });
+
+        Promise.all(promises)
+            .then(function(values){
+                log.info('Cached players successfully');
+                resolve();
+            })
+            .catch(reject);
+    }).catch(log.error);
+
 }
 
 function getGroupsFromTournamentName(tournamentName){
@@ -204,7 +218,7 @@ function getGroupsFromTournamentName(tournamentName){
                 var phases = tournamentData.phase;
 
                 phases.forEach(function(phase){
-                    var promise = getPhaseData(phase.id)
+                    var promise = getPhaseData(phase.id);
                     phasePromises.push(promise);
                 });
 
@@ -226,5 +240,90 @@ function getGroupsFromTournamentName(tournamentName){
                     })
                     .catch(reject);
             }).catch(reject);
-    })
+    }).catch(log.error);
+}
+
+function getMatches(tournamentName){
+    return new Promise(function(resolve, reject){
+        getGroupsFromTournamentName(tournamentName)
+            .then(function(groups){
+                var matchPromises = [];
+
+                groups.forEach(function(group){
+                    matchPromises.push(getMatchesFromGroup(group))
+                });
+
+                Promise.all(matchPromises)
+                    .then(function(values){
+                        try {
+                            var matches = _.flatten(values);
+                            resolve(matches);
+                        }catch(err){reject(err)}
+                    })
+                    .catch(reject);
+            }).catch(reject)
+    }).catch(log.error);
+
+}
+
+function getMatchesFromGroup(group){
+    return new Promise(function(resolve, reject){
+        var promises = [];
+        for (var i in group.sets) {
+            var set = group.sets[i];
+
+            var player1Id = set.entrant1Id;
+            var player2Id = set.entrant2Id;
+            if (!player1Id || !player2Id) return;
+
+            promises.push(getMatchFromSet(player1Id, player2Id, set));
+        }
+
+        Promise.all(promises)
+            .then(function(matches){
+                try {
+                    matches = _.uniqBy(matches, function (m) {
+                        return [m.Player1.tag, m.Player2.tag, m.Round, m.BO].join()
+                    });
+                    resolve(matches);
+                }catch(err){reject(err)}
+            })
+            .catch(reject)
+    }).catch(log.error)
+}
+
+function getMatchFromSet(player1Id, player2Id, set){
+    return new Promise(function (resolve, reject) {
+        resolvePlayers(player1Id, player2Id)
+            .then(function (players) {
+                try {
+                    var player1 = players[0];
+                    var player2 = players[1];
+
+                    var bo = set.bestOf;
+                    var round = set.midRoundText;
+
+                    var m = new Match(player1, player2, round, bo);
+                    log.debug('Adding match: ', m);
+                    resolve(m);
+                }catch(err){reject(err)}
+            })
+            .catch(reject)
+    }).catch(log.error);
+}
+
+/**
+ * Takes a variable amount of entrantIds
+ * and resolves a list of players
+ */
+function resolvePlayers(id1, id2){
+    return new Promise(function(resolve, reject){
+        var promises = [];
+        promises.push(cache.checkCacheForTournamentPlayer(id1));
+        promises.push(cache.checkCacheForTournamentPlayer(id2));
+
+        Promise.all(promises)
+            .then(resolve)
+            .catch(reject)
+    }).catch(log.error);
 }
