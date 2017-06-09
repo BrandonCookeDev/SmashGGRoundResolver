@@ -161,16 +161,17 @@ function getAllPlayers(tournamentName){
 function getPlayersFromGroup(group){
     var players = [];
     var groupPlayers = group.player;
-    groupPlayers.forEach(function(player){
-        var tag, globalId, entrantId;
-        tag = player.gamerTag;
-        globalId = player.id;
-        entrantId = parseInt(player.entrantId);
+    if(groupPlayers) {
+        groupPlayers.forEach(function (player) {
+            var tag, globalId, entrantId;
+            tag = player.gamerTag;
+            globalId = player.id;
+            entrantId = parseInt(player.entrantId);
 
-        var p = new Player(tag, globalId, entrantId);
-        players.push(p);
-    });
-
+            var p = new Player(tag, globalId, entrantId);
+            players.push(p);
+        });
+    }
     return players;
 }
 
@@ -232,30 +233,34 @@ function getMatches(tournamentName){
         log.verbose('Getting matches for ' + tournamentName);
         getGroupsFromTournamentName(tournamentName)
             .then(function(groups){
-                var promises = [];
-                var sets = [];
+                if(groups) {
+                    var promises = [];
+                    var sets = [];
 
-                groups.forEach(function(group){
-                    //promises.push(getMatchesFromGroup(group))
-                    sets = sets.concat(group.sets);
-                });
+                    groups.forEach(function (group) {
+                        //promises.push(getMatchesFromGroup(group))
+                        sets = sets.concat(group.sets);
+                    });
 
-                sets.forEach(function(set){
-                    var player1Id = set.entrant1Id;
-                    var player2Id = set.entrant2Id;
-                    if (!player1Id || !player2Id) return;
+                    sets.forEach(function (set) {
+                        var player1Id = set.entrant1Id;
+                        var player2Id = set.entrant2Id;
+                        if (!player1Id || !player2Id) return;
 
-                    promises.push(getMatchFromSet(player1Id, player2Id, set));
-                });
+                        promises.push(getMatchFromSet(player1Id, player2Id, set));
+                    });
 
-                Promise.all(promises)
-                    .then(function(values){
-                        try {
-                            var matches = _.flatten(values);
-                            resolve(matches);
-                        }catch(err){reject(err)}
-                    })
-                    .catch(reject);
+                    Promise.all(promises)
+                        .then(function (values) {
+                            try {
+                                var matches = _.flatten(values);
+                                resolve(matches);
+                            } catch (err) {
+                                reject(err)
+                            }
+                        })
+                        .catch(reject);
+                }
             }).catch(reject)
     }).catch(log.error);
 }

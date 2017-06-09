@@ -7472,3 +7472,29 @@ From previous event:
     at next (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/express/lib/router/index.js:275:10)
     at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/body-parser/lib/read.js:130:5
     at invokeCallback (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/raw-body/index.js:262:16)
+2017-06-09T19:00:34.488Z - error:  TypeError: Cannot read property 'forEach' of undefined
+    at getPlayersFromGroup (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/smashgg.lib.js:164:17)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/smashgg.lib.js:144:48
+    at Array.forEach (native)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/smashgg.lib.js:143:32
+    at runCallback (timers.js:651:20)
+    at tryOnImmediate (timers.js:624:5)
+    at processImmediate [as _immediateCallback] (timers.js:596:5)
+From previous event:
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/smashgg.lib.js:141:22
+    at next (native)
+    at onFulfilled (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/co/index.js:65:19)
+    at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-06-09T19:01:26.879Z - error:  TypeError: Cannot read property 'forEach' of undefined
+    at getPlayersFromGroup (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/smashgg.lib.js:164:17)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/smashgg.lib.js:144:48
+    at Array.forEach (native)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/smashgg.lib.js:143:32
+    at runCallback (timers.js:651:20)
+    at tryOnImmediate (timers.js:624:5)
+    at processImmediate [as _immediateCallback] (timers.js:596:5)
+From previous event:
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/smashgg.lib.js:141:22
+    at next (native)
+    at onFulfilled (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/co/index.js:65:19)
+    at process._tickCallback (internal/process/next_tick.js:103:7)
