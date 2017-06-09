@@ -7498,3 +7498,90 @@ From previous event:
     at next (native)
     at onFulfilled (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/co/index.js:65:19)
     at process._tickCallback (internal/process/next_tick.js:103:7)
+2017-06-09T19:29:11.340Z - error:  TypeError: Cannot read property 'entrant1Id' of undefined
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/smashgg.lib.js:246:44
+    at Array.forEach (native)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/smashgg.lib.js:245:26
+    at runCallback (timers.js:651:20)
+    at tryOnImmediate (timers.js:624:5)
+    at processImmediate [as _immediateCallback] (timers.js:596:5)
+From previous event:
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/smashgg.lib.js:235:14
+From previous event:
+    at Object.getMatches (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/smashgg.lib.js:232:12)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:34:37
+    at next (native)
+    at onFulfilled (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/co/index.js:65:19)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/co/index.js:54:5
+    at co (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/co/index.js:50:10)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:29:9
+    at Layer.handle [as handle_request] (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/express/lib/router/index.js:275:10)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/body-parser/lib/read.js:130:5
+    at invokeCallback (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/raw-body/index.js:262:16)
+    at done (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/raw-body/index.js:251:7)
+    at IncomingMessage.onEnd (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/raw-body/index.js:307:7)
+    at emitNone (events.js:86:13)
+2017-06-09T19:30:08.764Z - error:  TypeError: Cannot read property 'entrant1Id' of undefined
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/smashgg.lib.js:246:44
+    at Array.forEach (native)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/smashgg.lib.js:245:26
+    at runCallback (timers.js:651:20)
+    at tryOnImmediate (timers.js:624:5)
+    at processImmediate [as _immediateCallback] (timers.js:596:5)
+From previous event:
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/smashgg.lib.js:235:14
+From previous event:
+    at Object.getMatches (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/smashgg.lib.js:232:12)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:34:37
+    at next (native)
+    at onFulfilled (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/co/index.js:65:19)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/co/index.js:54:5
+    at co (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/co/index.js:50:10)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:29:9
+    at Layer.handle [as handle_request] (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/express/lib/router/index.js:275:10)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/body-parser/lib/read.js:130:5
+    at invokeCallback (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/raw-body/index.js:262:16)
+    at done (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/raw-body/index.js:251:7)
+    at IncomingMessage.onEnd (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/raw-body/index.js:307:7)
+    at emitNone (events.js:86:13)
+2017-06-09T19:31:38.935Z - error:  TypeError: Cannot read property 'entrant1Id' of undefined
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/smashgg.lib.js:246:31
+    at Array.forEach (native)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/smashgg.lib.js:245:26
+    at runCallback (timers.js:651:20)
+    at tryOnImmediate (timers.js:624:5)
+    at processImmediate [as _immediateCallback] (timers.js:596:5)
+From previous event:
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/smashgg.lib.js:235:14
+From previous event:
+    at Object.getMatches (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/smashgg.lib.js:232:12)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:34:37
+    at next (native)
+    at onFulfilled (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/co/index.js:65:19)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/co/index.js:54:5
+    at co (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/co/index.js:50:10)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:29:9
+    at Layer.handle [as handle_request] (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/express/lib/router/index.js:275:10)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/body-parser/lib/read.js:130:5
+    at invokeCallback (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/raw-body/index.js:262:16)
+    at done (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/raw-body/index.js:251:7)
+    at IncomingMessage.onEnd (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/raw-body/index.js:307:7)
+    at emitNone (events.js:86:13)

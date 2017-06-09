@@ -203,25 +203,31 @@ function getGroupsFromTournamentName(tournamentName){
                 var phases = tournamentData.phase;
 
                 phases.forEach(function(phase){
-                    var promise = getPhaseData(phase.id);
-                    phasePromises.push(promise);
+                    if(phase) {
+                        var promise = getPhaseData(phase.id);
+                        phasePromises.push(promise);
+                    }
                 });
 
                 Promise.all(phasePromises)
                     .then(function(phaseDataArr){
-                        var groupPromises = [];
-                        phaseDataArr.forEach(function(phase){
-                            var groups = phase.groups;
-                            groups.forEach(function(group){
-                                var promise = getGroupData(group.id);
-                                groupPromises.push(promise);
+                        if(phaseDataArr) {
+                            var groupPromises = [];
+                            phaseDataArr.forEach(function (phase) {
+                                if (phase) {
+                                    var groups = phase.groups;
+                                    groups.forEach(function (group) {
+                                        var promise = getGroupData(group.id);
+                                        groupPromises.push(promise);
+                                    });
+                                }
                             });
-                        });
 
-                        Promise.all(groupPromises)
-                            .then(function(groupDataArr){
-                                resolve(groupDataArr);
-                            }).catch(reject);
+                            Promise.all(groupPromises)
+                                .then(function (groupDataArr) {
+                                    resolve(groupDataArr);
+                                }).catch(reject);
+                        }
                     })
                     .catch(reject);
             }).catch(reject);
@@ -238,16 +244,18 @@ function getMatches(tournamentName){
                     var sets = [];
 
                     groups.forEach(function (group) {
-                        //promises.push(getMatchesFromGroup(group))
-                        sets = sets.concat(group.sets);
+                        if(group)
+                            sets = sets.concat(group.sets);
                     });
 
                     sets.forEach(function (set) {
-                        var player1Id = set.entrant1Id;
-                        var player2Id = set.entrant2Id;
-                        if (!player1Id || !player2Id) return;
+                        if(set && set.entrant1Id && set.entrant2Id) {
+                            var player1Id = set.entrant1Id;
+                            var player2Id = set.entrant2Id;
+                            if (!player1Id || !player2Id) return;
 
-                        promises.push(getMatchFromSet(player1Id, player2Id, set));
+                            promises.push(getMatchFromSet(player1Id, player2Id, set));
+                        }
                     });
 
                     Promise.all(promises)
