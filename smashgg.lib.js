@@ -316,7 +316,7 @@ function getMatchFromSet(player1Id, player2Id, set){
                     var player2 = players[1];
 
                     var bo = set.bestOf;
-                    var round = set.midRoundText;
+                    var round = set.fullRoundText;
 
                     var m = new Match(player1, player2, round, bo);
                     log.debug('Adding match: ', m);

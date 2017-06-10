@@ -7585,3 +7585,46 @@ From previous event:
     at done (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/raw-body/index.js:251:7)
     at IncomingMessage.onEnd (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/raw-body/index.js:307:7)
     at emitNone (events.js:86:13)
+2017-06-10T02:23:35.600Z - error:  Error: getaddrinfo ENOTFOUND api.smash.gg api.smash.gg:443
+    at errnoException (dns.js:28:10)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:76:26)
+2017-06-10T02:23:35.608Z - error:  Error: Client request error: getaddrinfo ENOTFOUND api.smash.gg api.smash.gg:443
+    at errnoException (dns.js:28:10)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:76:26)
+From previous event:
+    at getGroupData (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/smashgg.lib.js:80:12)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/smashgg.lib.js:220:55
+    at Array.forEach (native)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/smashgg.lib.js:219:44
+    at Array.forEach (native)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/smashgg.lib.js:216:42
+From previous event:
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/smashgg.lib.js:213:22
+    at runCallback (timers.js:651:20)
+    at tryOnImmediate (timers.js:624:5)
+    at processImmediate [as _immediateCallback] (timers.js:596:5)
+From previous event:
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/smashgg.lib.js:201:14
+From previous event:
+    at getGroupsFromTournamentName (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/smashgg.lib.js:196:12)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/smashgg.lib.js:240:9
+From previous event:
+    at Object.getMatches (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/smashgg.lib.js:238:12)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:34:37
+    at next (native)
+    at onFulfilled (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/co/index.js:65:19)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/co/index.js:54:5
+    at co (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/co/index.js:50:10)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/app.js:29:9
+    at Layer.handle [as handle_request] (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/express/lib/router/index.js:275:10)
+    at urlencodedParser (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/body-parser/lib/types/urlencoded.js:82:7)
+    at Layer.handle [as handle_request] (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/express/lib/router/index.js:317:13)
+    at /Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/bcooke/Documents/Workspace/SmashGGRoundPull/node_modules/express/lib/router/index.js:335:12)
