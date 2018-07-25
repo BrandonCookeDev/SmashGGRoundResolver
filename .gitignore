@@ -1,1 +1,5 @@
 node_modules
+
+# Editor droppings
+.idea
+.vscode
