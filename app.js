@@ -9,7 +9,8 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-var lib = require('./smashgg.lib');
+//var lib = require('./smashgg.lib');
+var Puller = require('./lib/puller');
 
 var port = 11769;
 
